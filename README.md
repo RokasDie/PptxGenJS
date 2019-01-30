@@ -22,12 +22,11 @@ Quickly and easily create PowerPoint presentations with a few simple JavaScript 
 **Table of Contents**  (*generated with [DocToc](https://github.com/thlorenz/doctoc)*)
 
 - [Live Demo](#live-demo)
-- [Installation](#installation)
-  - [Client-Side](#client-side)
-    - [Include Local Scripts](#include-local-scripts)
-    - [Include Bundled Script](#include-bundled-script)
-    - [Install With Bower](#install-with-bower)
-  - [Node.js](#nodejs)
+  - [Installation](#installation)
+    - [CDN](#cdn)
+    - [Download](#download)
+    - [Npm](#npm)
+    - [Yarn](#yarn)
 - [Quick Start Guide](#quick-start-guide)
 - [Library API](#library-api)
   - [Presentation Creation/Options](#presentation-creationoptions)
@@ -60,35 +59,45 @@ Quickly and easily create PowerPoint presentations with a few simple JavaScript 
 Use JavaScript to create a PowerPoint presentation with your web browser right now:  
 [https://gitbrent.github.io/PptxGenJS](https://gitbrent.github.io/PptxGenJS)
 
-# Installation
-## Client-Side
-### Include Local Scripts
-```javascript
+## Installation
+
+### CDN
+```html
+<!-- Bundle: Easiest to use, supports all browsers -->
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@2.4.0/dist/pptxgen.bundle.js"></script>
+
+<!-- Individual files: Add only what's needed to avoid clobbering loaded libraries -->
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@2.4.0/libs/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@2.4.0/libs/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@2.4.0/dist/pptxgen.min.js"></script>
+```
+
+### Download
+[GitHub Latest Release](https://github.com/gitbrent/PptxGenJS/releases/latest)
+```html
+<!-- Bundle: Easiest to use, supports all browsers -->
+<script src="PptxGenJS/libs/pptxgen.bundle.js"></script>
+
+<!-- Individual files: Add only what's needed to avoid clobbering loaded libraries -->
 <script src="PptxGenJS/libs/jquery.min.js"></script>
 <script src="PptxGenJS/libs/jszip.min.js"></script>
-<script src="PptxGenJS/dist/pptxgen.js"></script>
-```
-* IE11 support requires a Promises polyfill as well (included in the libs folder)
-
-### Include Bundled Script
-```javascript
-<script src="PptxGenJS/dist/pptxgen.bundle.js"></script>
-```
-* Bundle script includes all libraries: jQuery + JSzip + PptxGenJS + Promises
-
-### Install With Bower
-```javascript
-bower install pptxgen
+<script src="PptxGenJS/dist/pptxgen.min.js"></script>
+<!-- IE11 requires Promises polyfill -->
+<!-- <script src="PptxGenJS/libs/promise.min.js"></script> -->
 ```
 
-## Node.js
-[PptxGenJS NPM Homepage](https://www.npmjs.com/package/pptxgenjs)
+### Npm
+[PptxGenJS NPM Home](https://www.npmjs.com/package/pptxgenjs)
 ```javascript
 npm install pptxgenjs
 
 var pptx = require("pptxgenjs");
 ```
-* Desktop: Compatible with Electron applications
+
+### Yarn
+```ksh
+yarn install pptxgenjs
+```
 
 **************************************************************************************************
 # Quick Start Guide
@@ -221,6 +230,7 @@ These include:
 * [Dzmitry Dulko](https://github.com/DzmitryDulko) - Getting the project published on NPM
 * [kajda90](https://github.com/kajda90) - New Master Slide Layouts
 * [Connor Bowman](https://github.com/conbow) - Adding Placeholders
+* [Reima Frgos](https://github.com/ReimaFrgos) - Multiple chart and general functionality patches
 * PPTX Chart Experts: [kajda90](https://github.com/kajda90), [Matt King](https://github.com/kyrrigle), [Mike Wilcox](https://github.com/clubajax)
 * Everyone who has [contributed](https://github.com/gitbrent/PptxGenJS/graphs/contributors), submitted an Issue, or created Pull Request.
 
@@ -236,6 +246,6 @@ Thanks to everyone who supports this project! &#10084;
 **************************************************************************************************
 # License
 
-Copyright &copy; 2015-2018 [Brent Ely](https://github.com/gitbrent/PptxGenJS)
+Copyright &copy; 2015-2019 [Brent Ely](https://github.com/gitbrent/PptxGenJS)
 
 [MIT](https://github.com/gitbrent/PptxGenJS/blob/master/LICENSE)
